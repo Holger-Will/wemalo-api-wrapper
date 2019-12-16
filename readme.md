@@ -24,5 +24,5 @@ await client.getAllProducts()
 ### get single Product
 
 ```
-await client.getProducts("idOfProduct")
+await client.getProduct("idOfProduct")
 ```
