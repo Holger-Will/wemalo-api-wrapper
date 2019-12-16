@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <svg id="symbol1" viewBox="0 0 100 100">
+     <circle cx="50" cy="50" r="50" fill="green"/>
+  </svg>
+  <svg id="symbol2" viewBox="0 0 100 100">
+     <circle cx="50" cy="50" r="50" fill="blue"/>
+  </svg>
+  <svg id="symbol3" viewBox="0 0 100 100">
+     <circle cx="50" cy="50" r="50" fill="red"/>
+  </svg>
+</svg>
