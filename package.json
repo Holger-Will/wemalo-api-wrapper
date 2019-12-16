@@ -1,5 +1,5 @@
 {
-  "name": "wemalo-api-client",
+  "name": "wemalo-api-wrapper",
   "version": "0.0.1",
   "description": "a wrapper for the wemalo API",
   "main": "index.js",
