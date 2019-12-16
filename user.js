@@ -1,7 +1,7 @@
-const WemaloClient = require("./")
+const WemaloClient = require('./')
 const client = new WemaloClient({token: process.env.wemaloToken})
 
-async function main(){
+async function main () {
   // var res = await client.addMultiple({"products":[{
   //   externalId: "3100",
   //   sku: "3100",
@@ -90,7 +90,6 @@ async function main(){
 //   }
 // ]})
 
-
 // res = await client.addProduct( {
 //     "externalId": "test00001",
 //     "sku": "test00001",
@@ -126,59 +125,59 @@ async function main(){
 //   extension:"jpg",
 //   base64data: fs.readFileSync("test.jpg", { encoding: 'base64' })
 // }))
-//console.log(await client.getUnits("3035"))
-//console.log(await client.getStock("3035"))
-//console.log(await client.changeActiveFlag("test00001",false))
-//console.log(await client.getNotFlaggedBookings("RETURNSHIPMENT", 1))
-//console.log(await client.setFlaggedBookings([1]))
-
+// console.log(await client.getUnits("3035"))
+// console.log(await client.getStock("3035"))
+// console.log(await client.changeActiveFlag("test00001",false))
+// console.log(await client.getNotFlaggedBookings("RETURNSHIPMENT", 1))
+// console.log(await client.setFlaggedBookings([1]))
 
 // var pl = {
 //     "payload": "https://dhculcowzl.execute-api.eu-central-1.amazonaws.com/prod/webhook/test",
 //     "token": "afdbc3dd562f7f033089",
 //     "mail": "h.will@klimapartner.de"
 // }
-//status_update, stock_change, refurbishment_action, trackingnumber_added
-//console.log(await client.registerWebHook("refurbishment_action",pl))
+// status_update, stock_change, refurbishment_action, trackingnumber_added
+// console.log(await client.registerWebHook("refurbishment_action",pl))
 
 // console.log(await client.getWebHooks())
 // console.log(await client.deleteWebHook("refurbishment_action"))
 // console.log(await client.getWebHooks())
-//console.log(await client.getGenericInterfaces())
-//console.log(await client.getStockReduced("3033",true))
-   //console.log(await client.availableStock(new Date(2019,9,22,6,32)))
-   //console.log(await client.getIncomingBookings(new Date(2019,9,22,6,32),new Date(2019,11,11,6,32)))
-   //console.log(await client.getAllProducts(new Date(2019,9,22,6,32)))
+// console.log(await client.getGenericInterfaces())
+// console.log(await client.getStockReduced("3033",true))
+   // console.log(await client.availableStock(new Date(2019,9,22,6,32)))
+   // console.log(await client.getIncomingBookings(new Date(2019,9,22,6,32),new Date(2019,11,11,6,32)))
+  var prods = await client.getAllProducts()
+  console.log(prods)
   // console.log(await client.deleteReservations(new Date(2019,9,22,6,32)))
-  //console.log(await client.getProduct("test00001"))
-  //console.log(JSON.stringify(await client.getProfiles(),null,2))
+  // console.log(await client.getProduct("test00001"))
+  // console.log(JSON.stringify(await client.getProfiles(),null,2))
 
-  var goodsOrder = {
-    meta:{
-      externalId: "Order0000002",
-      currency: "EUR",
-      pickingInfo: "this is just a test",
-      descriptionOfGoods: "bla bla",
-      blocked: 1,
-      receiver:[{
-        primary: true,
-        name1: "Klimapartner GmbH",
-        name2: "c/o Holger Will",
-        street: "Bürgerstrasse",
-        streetNumber: "53",
-        countryCode2Letter: "DE",
-        city: "Berlin",
-        zip: "12347",
-        email: "kontakt@klimapartner.de",
-        customerNumber: "xyz11111"
-      }]
-    },
-    positions:[{
-      externalId: "3033",
-      quantity: 3
-    }]
-  }
-//console.log(await client.addGoodsOrder(goodsOrder))
+  // var goodsOrder = {
+  //   meta: {
+  //     externalId: 'Order0000002',
+  //     currency: 'EUR',
+  //     pickingInfo: 'this is just a test',
+  //     descriptionOfGoods: 'bla bla',
+  //     blocked: 1,
+  //     receiver: [{
+  //       primary: true,
+  //       name1: 'Klimapartner GmbH',
+  //       name2: 'c/o Holger Will',
+  //       street: 'Bürgerstrasse',
+  //       streetNumber: '53',
+  //       countryCode2Letter: 'DE',
+  //       city: 'Berlin',
+  //       zip: '12347',
+  //       email: 'kontakt@klimapartner.de',
+  //       customerNumber: 'xyz11111'
+  //     }]
+  //   },
+  //   positions: [{
+  //     externalId: '3033',
+  //     quantity: 3
+  //   }]
+  // }
+// console.log(await client.addGoodsOrder(goodsOrder))
 
   // pos = {
   //   positions:[{
@@ -196,9 +195,9 @@ async function main(){
 //   }))
 // console.log(await client.addOrderNote("Order0000001",{notices:"this is just a test"}))
 // console.log(await client.getProduct("3104"))
-//console.log(await client.changeGoodsOrderPriority("Order0000001",{"priority": "0"}))
-//console.log(await client.getGoodsOrderStatus("Order0000002"))
-//console.log(await client.cancelGoodsOrder("Order0000001",{reason:"this was jsut a test"}))
-//console.log(await client.deleteReservations())
+// console.log(await client.changeGoodsOrderPriority("Order0000001",{"priority": "0"}))
+// console.log(await client.getGoodsOrderStatus("Order0000002"))
+// console.log(await client.cancelGoodsOrder("Order0000001",{reason:"this was jsut a test"}))
+// console.log(await client.deleteReservations())
 }
 main()

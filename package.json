@@ -1,7 +1,7 @@
 {
   "name": "wemalo-api-client",
   "version": "0.0.1",
-  "description": "",
+  "description": "a wrapper for the wemalo API",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
