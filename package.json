@@ -11,5 +11,17 @@
   "dependencies": {
     "mocha": "^6.2.2",
     "node-fetch": "^2.6.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Holger-Will/wemalo-api-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Holger-Will/wemalo-api-wrapper/issues"
+  },
+  "homepage": "https://github.com/Holger-Will/wemalo-api-wrapper#readme"
 }
