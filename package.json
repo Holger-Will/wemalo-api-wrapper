@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "mocha": "^6.2.2",
+    "mocha": "^6.2.3",
     "node-fetch": "^2.6.0"
   },
   "directories": {
